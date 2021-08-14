@@ -1,0 +1,91 @@
+.post-creator {
+    display: flex;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #EAEAEA;
+    width: 800px;
+    min-height: 60px;
+    margin: 20px;
+    box-shadow: 0px 4px 10px -8px black;
+
+    #user_img {
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    textarea {
+        // flex: 1;
+        // background-color: #EAEAEA;
+        // border: none;
+        // line-height: 24;
+        // // resize: none;
+        // overflow-y: auto;
+    
+        // // &:focus {
+        // //     outline: none;
+        // // }
+        flex: 1;
+        box-sizing: border-box;
+        border: none;
+        resize: none;
+        font-size: 20px;
+        line-height: 24px;
+        overflow: auto;
+        overflow-style: none;
+        height: auto;
+        padding: 8px;
+        background-color: #EAEAEA;
+        margin: 0 10px 0 10px;
+    
+        &:focus {
+            outline: none;
+        }
+    
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    #btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .send {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(204, 204, 204);
+
+                svg path {
+                    fill: lighten($color: #314067, $amount: 10%);
+                }
+            }
+
+            &:active {
+                background-color: darken($color: rgb(204, 204, 204), $amount: 10%);
+
+                svg path {
+                    fill: #314067;
+                }
+            }
+
+            svg {
+                margin: 0 0 0 5px;
+
+                path {
+                    transition: fill 0.5s;
+                    fill:lighten($color: #314067, $amount: 25%);
+                }
+            }
+        }
+    }
+}

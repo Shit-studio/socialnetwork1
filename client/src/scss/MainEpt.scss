@@ -1,0 +1,169 @@
+.inactive {
+    display: none;
+}
+
+.eighteenplus {
+    filter: blur(9px);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dBilly {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.user_posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jopaBilly {
+    display: flex;
+    width: 1410px;
+    // justify-content: center;
+
+
+    .avakus {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 40px;
+
+        div {
+            transition: transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
+
+            &:hover {
+                filter: brightness(95%);
+                transform: translateY(-5px);
+                box-shadow: -11px 10px 8px 0px rgba(34, 60, 80, 0.2);
+            }
+        }
+    }
+
+    .sheNePrydumaly {
+
+        display: flex;
+        justify-items: center;
+        // justify-content: center;
+        align-items: center;
+        max-height: 621px;
+        width: 322px;
+        background-color: wheat;
+        border-radius: 10px;
+
+        p {
+            max-width: 280px;
+        }
+
+    }
+
+}
+
+.stylesept {
+    padding-top: 20px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 1410px;
+
+    .BillyGayTlo {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px 10px 0 0;
+        background-image: url("../assets/img/nature.jpeg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .tipamenu {
+
+        // text-align: center;
+        font-size: 36px;
+        height: 87px;
+        width: 1410px;
+        background-color: #EAEAEA;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            list-style-type: none;
+            height: 87px;
+            padding: 0 40px 0 40px;
+            margin: 0;
+
+            a {
+                display: flex;
+                text-decoration: none;
+            }
+
+            li {
+                align-self: center;
+                transition: background-color 0.2s;
+            }
+
+            li:not(:nth-child(3)) {
+                height: 60px;
+                width: 200px;
+                color: #888888;
+                text-align: center;
+                border-radius: 10px;
+                transition: color 0.2s, background-color 0.2s;
+
+                &.active {
+                    color: #000000;
+                }
+                
+                &:hover {
+                    background-color: darken($color: #EAEAEA, $amount: 10%);
+                    cursor: pointer;
+                }
+
+                &:active {
+                    background-color: darken($color: #EAEAEA, $amount: 20%);
+                }
+
+            }
+        }
+    }
+
+    .tipamenu2 {
+        height: 79px;
+        width: 1410px;
+        background-color: #E2E2E2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .tipaknopky {
+            a {
+                font-size: 24px;
+                height: 44px;
+                text-decoration: none;
+                color: white;
+                padding: 5px;
+                background-color: #314067;
+                border-radius: 10px;
+                margin-right: 20px;
+                height: 44px;
+                position: relative;
+                top: 15%;
+
+                &:hover {
+                    cursor: pointer;
+                    transition-duration: 0.5s;
+                    background-color: lighten($color: #314067, $amount: 15%);
+                }
+            }
+        }
+    }
+
+}

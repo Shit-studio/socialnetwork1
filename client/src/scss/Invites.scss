@@ -1,0 +1,38 @@
+.invitesBlock {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: auto;
+    max-height: 400px;
+    overflow: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #EAEAEA;
+
+    #title {
+        margin: 10px;
+        font-size: 24px;
+    }
+}
+
+.invite {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    padding: 10px;
+    
+    &:hover {
+        background-color: darken($color: #EAEAEA, $amount: 10%);
+    }
+
+    img {
+        border-radius: 50%;
+    }
+
+    .btns {
+        display: flex;
+        flex-direction: row;
+    }
+}

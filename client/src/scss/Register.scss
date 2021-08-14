@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+
+.ilyaGay {
+    display: flex;
+    height: 100vh;
+
+    .gay {
+        display: flex;
+        justify-content: center;
+        background-color: #29669F;
+        width: 50%;
+        color: white;
+        align-items: center;
+        text-align: center;
+        font-family: 'Piedra', cursive;
+        font-size: 64px;
+    }
+
+    .gaytwo {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        background-color: #dadada;
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+            input {
+                box-sizing: border-box;
+                font-size: 24px;
+                height: 62px;
+                width: 456px;
+                border: none;
+                border-radius: 20px;
+                padding-left: 30px;
+                background-color: #ebebeb;
+    
+                &:focus {
+                  outline: none;  
+                }
+            }
+    
+            .btn {
+                color: white;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 24px;
+                height: 54px;
+                line-height: 54px;
+                width: 264px;
+                border-radius: 20px;
+                background-color: #314067;
+                transition: background-color 0.1s;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: lighten($color: #314067, $amount: 5%);
+                }
+
+                &:active {
+                    background-color: darken($color: #314067, $amount: 5%);
+                }
+
+            }
+
+            span:nth-last-child(1) {
+                color: #8b8b8b;
+                width: 240px;
+                margin-top: 15px;
+            }
+        
+        }
+    }
+}

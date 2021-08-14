@@ -1,0 +1,30 @@
+.Friend {
+    background-color: white;
+    border-radius: 5px;
+    margin: right 40px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 231px;
+    height: 297px;
+
+    .btn {
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        background-color: #314f67;
+        text-decoration: none;
+        height: 26px;
+        width: 190px;
+        border-radius: 10px;
+        vertical-align: middle;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &:hover {
+            transition-duration: 0.5s;
+            background-color: lighten($color: #314067, $amount: 15%);
+        }
+    }
+}
