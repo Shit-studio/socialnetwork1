@@ -41,9 +41,8 @@ export class UserPosts extends React.Component {
 export class UserFriends extends React.Component {
     constructor(props) {
         super(props);
-        const { id } = this.props.match.params;
         this.state = {
-            userId: id,
+            userId: this.props.match.params.id,
             friends: []
         }
     }
@@ -56,6 +55,10 @@ export class UserFriends extends React.Component {
              })
     }
     
+    componentDidUpdate(prevState, newState) {
+        console.log("2", prevState.match.params.id, newState.userId);
+    }
+
     render(){
         return (
             <div className="jopaBilly">

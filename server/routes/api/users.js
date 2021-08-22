@@ -56,6 +56,7 @@ router.get("/getuser", (req, res) => {
     User.findOne({raw: true, where: {id: req.query.userId}})
         .then((user) => {
           res.status(200).json({
+            id: user.id,
             name: user.name,
             surname: user.surname
           });
