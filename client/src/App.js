@@ -1,6 +1,6 @@
 import "./App.scss";
 import { Header } from "./components";
-import { Home, Login, Register } from "./pages";
+import { Home, Login, Register, Settings } from "./pages";
 import UserProfile from "./pages/UserProfile";
 import { Switch, Route } from "react-router-dom";
 import { setCurrentUser, logoutUser } from "./redux/actions/authActions";
@@ -33,6 +33,7 @@ function App() {
       <Switch>
         <PrivateRoute exact path="/" component={Home} />
         <PrivateRoute exact path="/users/:id/*" component={UserProfile} />
+        <PrivateRoute exact path="/settings/*" component={Settings} />
       </Switch>
     </div>
     </Provider>

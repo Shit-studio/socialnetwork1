@@ -33,6 +33,7 @@
     "mysql2": "^2.3.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-toastify": "^7.0.4",
     "sequelize": "^6.6.5",
     "validator": "^13.6.0",
     "y18n": "^5.0.8",

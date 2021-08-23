@@ -1,5 +1,6 @@
 import React from 'react';
 import { Friend, Ass, Post } from "../components";
+
 import axios from 'axios';
 
 export class UserPosts extends React.Component {
@@ -7,13 +8,11 @@ export class UserPosts extends React.Component {
         super(props);
         const { id } = this.props.match.params;
         this.state = {
-            // posts: {},
             userId: id
         }
     }
 
     componentDidMount() {
-        console.log(this.state.userId);
         axios.get('http://localhost:5000/api/users/getuserposts?userId=' + this.state.userId)
              .then(res => {
                 this.setState({

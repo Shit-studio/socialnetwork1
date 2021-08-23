@@ -5,6 +5,8 @@ import GayBilly from "../assets/img/977.jpg";
 import { Switch, Route, Link } from "react-router-dom";
 import { UserPosts, UserFriends, UserPhotos, UserVideos } from "../components";
 import "../scss/MainEpt.scss";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from 'react-toastify';
 import classNames from "classnames";
 
 class UserProfile extends React.Component {
@@ -53,22 +55,31 @@ class UserProfile extends React.Component {
         });
       }
     
-      addFriend() {
-        if(this.id !== this.props.auth.user.id){
-          axios.post("http://localhost:5000/api/users/addfriendship", {
-            requesterId: this.props.auth.user.id,
-            addresseeId: this.state.id,
-            status: "Pending"
-          })
-          .then(() => console.log("FriendShip is created!!!"))
-        } else {
-          console.log("Fuck you!!!");
-        }
+    addFriend() {
+      if(this.id !== this.props.auth.user.id){
+        toast.info("Request are sended!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
+        axios.post("http://localhost:5000/api/users/addfriendship", {
+          requesterId: this.props.auth.user.id,
+          addresseeId: this.state.id,
+          status: "Pending"
+        })
+        .then(() => toast("FriendShip is created!!!"))
+        .catch(() => toast("Something gets wrong!!!"))
       }
+    }
 
     render(){
         return (
             <div className="main" key={this.state.id}>
+              <ToastContainer />
               <div className="dBilly">
                 <div className="stylesept">
                   <div className="BillyGayTlo">

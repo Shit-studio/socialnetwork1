@@ -54,7 +54,9 @@ export function UserMenu() {
           <hr />
           <div className="options">
             <div><img width={30} height={30} src={bookmarkSvg} alt="bookmark" />Збережені</div>
-            <div><img width={30} height={30} src={gearSvg} alt="gear" />Налаштування</div>
+            <Link to="/settings/profile">    
+              <div><img width={30} height={30} src={gearSvg} alt="gear" />Налаштування</div>
+            </Link>
           </div>
           {/* <hr /> */}
           <div onClick={logoutHandler} className="exit"><ExitSvg width={25} height={25} fill="red" />Вийти</div>

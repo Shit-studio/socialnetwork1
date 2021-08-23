@@ -25,6 +25,19 @@ router.post("/acceptfriendinvite", async (req, res) => {
   })
 })
 
+router.post("/declinefriendinvite", async (req, res) => {
+  console.log(req.body);
+  Friendship.destroy({
+      where: {
+        requesterId: req.body.requesterId,
+        addresseeId: req.body.addresseeId
+      }
+  })
+  .then(() => {
+    console.log("Deleted");
+  })
+})
+
 router.get("/getfriendinvites", (req, res) => {
   if(req.query.userId !== "") {
     let result = [];
